@@ -58,6 +58,10 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
+<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<script src="site_libs/viz-1.8.2/viz.js"></script>
+<link href="site_libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet">
+<script src="site_libs/grViz-binding-1.0.11/grViz.js"></script>
 
 
 <link rel="stylesheet" href="styles.scss">
@@ -127,8 +131,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#photo-journaling" id="toc-photo-journaling" class="nav-link" data-scroll-target="#photo-journaling">Photo journaling</a></li>
   <li><a href="#video-journaling" id="toc-video-journaling" class="nav-link" data-scroll-target="#video-journaling">Video journaling</a></li>
   <li><a href="#surveys" id="toc-surveys" class="nav-link" data-scroll-target="#surveys"></a><a name="surveys" class="nav-link" data-scroll-target="undefined"></a> Surveys</li>
-  <li><a href="#livelihood-analysis" id="toc-livelihood-analysis" class="nav-link" data-scroll-target="#livelihood-analysis">Livelihood Analysis</a></li>
-  <li><a href="#value-chain-analysis" id="toc-value-chain-analysis" class="nav-link" data-scroll-target="#value-chain-analysis">Value Chain Analysis</a></li>
+  <li><a href="#livelihood-analysis" id="toc-livelihood-analysis" class="nav-link" data-scroll-target="#livelihood-analysis"></a><a name="la" class="nav-link" data-scroll-target="undefined"></a>Livelihood Analysis</li>
+  <li><a href="#value-chain-analysis" id="toc-value-chain-analysis" class="nav-link" data-scroll-target="#value-chain-analysis"></a><a name="vca" class="nav-link" data-scroll-target="undefined"></a>Value Chain Analysis</li>
   </ul></li>
   </ul>
 </nav>
@@ -153,7 +157,24 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>If you’re here it means you have already read <a href="./va.html">this page</a> on the logic for deploying an intervention in the community of Lambeau. We shall now look into PVA methodology in case the term is unfamiliar.</p>
+<p>If you’re here it means you have already read <a href="./va.html">this page</a> on the logic for an intervention in Lambeau. We shall now look into the key methodology - the work that gives us credence to enter the community; the Vulnerability Assessment.</p>
+<p>A Vulnerability assessments (VA) is guided by information gathered via three considerations:</p>
+<ol type="1">
+<li>The Social environment</li>
+<li>The Nature of the selected locale</li>
+<li>Current and Future climate variability and change</li>
+</ol>
+<p>Social environment has impact potential for a community’s vulnerability. To use a scenario: A well kept, god fearing, fenced burg with parent/teach assocs; with strong but positive diversions like sport, aversion to having rumshops etcetera under the family bedroom - are exemplary aspects of attempts to provide a good social environment. The initial outlook here says the above social environment is less prone, carries less potential for negative social impact: Hence, is less vulnerable in the face of current and future climate change stress.</p>
+<p>Now say we have …. a society exposed to (f.e) high crime vs one with low crime, one will have strong business presence, leading to jobs nearer to home vs rampant poverty. Both situations give rise to attendant ills. However one can be said to be more exposed and therefore has less adaptive capacity <strong>Thus</strong> is more vulnerable to effects wrought due to climate change [variability].</p>
+<p>Climate as it changes will also affect Nature within the study area. A vulnerability assessment watches (examples) Poverty; affecting land use (hillside agric using bad techniques ), deforestation, erosion, strong - as opposed to compromised biodiversity, soil and water retention aspects that can affect the local ecosystem. In short the study area (and sometimes places outside of it) with an intact natural environment may be said to have less exposure than one that is Exposed. In this case a natural environment either has less Adaptive capacity or it does not.</p>
+<p>The following diagram attempts to show the contributory factors that determine vulnerability to climate variability. Bear in mind they often overlap.<br>
+<!--- '.dot' file include  ---></p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="grViz html-widget html-fill-item" id="htmlwidget-d9d9acc1f45e470cdc29" style="width:100%;height:361px;"></div>
+<script type="application/json" data-for="htmlwidget-d9d9acc1f45e470cdc29">{"x":{"diagram":"digraph vulnerability{\n  \n  graph [labelloc =\"t\", label=\"Assessing Vulnerability\", fontsize=18, fontname=Helvetica]\n\nnode [shape=\"plain\"]\n\n    1 [label=\"Social \\nEnvironment\"]\n    2 [label=\"Nature\"]\n    3 [label=\"Current and Future \\nclimate variability \\nand change\"]\n    4 [label=\"Sensitivity\"]\n    5 [label=\"Exposure\"]\n    6 [label=\"Potential \\nImpact\"]\n    7 [label=\"Adaptive \\nCapacity\"]\n    8 [label=\"Vulnerability\", shape=\"box\",color=\"#ACAFA\"] # gray\n  \nedge \n\n[arrowhead=vee,color=\"#ACAFAF\",style=dashed];  \n\n\n1 ->{6,5}\n2 -> 5\n6 -> 8\n5 -> 7 -> 8\n3 -> 4 -> 7\n\n}\n\n/* Footnotes*/","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -241,13 +262,13 @@ Tips for developing survey questions
 <p>And here is the link to <a href="#">the forthcoming LM4eJ survey</a> <em>This link is not active at this point but it will take you to a Google Form soon</em> …</p>
 </section>
 <section id="livelihood-analysis" class="level3">
-<h3 class="anchored" data-anchor-id="livelihood-analysis">Livelihood Analysis</h3>
+<h3 class="anchored" data-anchor-id="livelihood-analysis"><a name="la"></a>Livelihood Analysis</h3>
 <p>Livelihood vulnerability analysis is a systematic, participatory approach for analysing the vulnerability of a community’s livelihoods to climate change. It aims to engage the community in identifying how climate change is affecting their livelihoods, the drivers of vulnerability and ways to build resilient and sustainable livelihoods.</p>
 <p>The analysis focuses not just on how community members earn a living, such as fishing, farming or tourism but also focuses on the wider concept of livelihoods assets and wellbeing. It also examines the opportunities and assets available to the community, and the different policies and institutions shaping these opportunities.</p>
 <p>Through understanding the livelihood activities and assets within a community, you can analyse how they will be affected by climate change and the factors that make them more or less vulnerable. You can identify ways that communities can respond using their available assets. Additionally, you can identify entry points for building adaptive capacity and resilience into the future.</p>
 </section>
 <section id="value-chain-analysis" class="level3">
-<h3 class="anchored" data-anchor-id="value-chain-analysis">Value Chain Analysis</h3>
+<h3 class="anchored" data-anchor-id="value-chain-analysis"><a name="vca"></a>Value Chain Analysis</h3>
 <p>“Identifying key stages in an enterprise. It shows for example the steps from sourcing raw material for the product (and/or service), to sale, to the final consumer. It is used to improve the bottom line of an enterprise by adding value to its product or service” (Arline, 2016).</p>
 <p>Next up …. <a href="./obj.html">Objectives and Activities</a></p>
 
